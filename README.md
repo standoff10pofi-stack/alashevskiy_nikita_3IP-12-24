@@ -17,13 +17,7 @@ sqlite3 publishing.db < schema.sql
 sqlite3 publishing.db < data.sql
 sqlite3 -header -column publishing.db < queries.sql
 
-Ожидаемый вывод: `README.md data.sql queries.sql report.md schema.sql`
 
----
-
-## БЛОК 2 — Создать ER-диаграмму (текстовую, для отчёта)
-
-Картинку рисовать не обязательно — можно вставить текстовую схему в `report.md`. Но если хотите PNG, проще всего открыть [dbdiagram.io](https://dbdiagram.io), вставить туда код ниже, нажать Export → PNG, сохранить как `erd.png` в `~/publishing-project`.
 
 ```bash
 cd ~/publishing-project && cat > erd.dbml <<'EOF'
